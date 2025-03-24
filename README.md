@@ -111,4 +111,3 @@ for i in $(ps aux|grep "upgrade_and_run"|grep -v grep |awk '{print $2}'); do sud
 ## Login in apool.io web
 
 #####  wait a few minutes Watch the Statistics and earn QU's on Apool
-# apool
