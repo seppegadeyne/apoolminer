@@ -1,12 +1,13 @@
-FROM nvidia/cuda:12.6.0-base-ubuntu24.04
+# docker run --rm --gpus all --log-opt max-size=10m --log-opt max-file=1 docker.io/seppegadeyne/apoolminer:latest
+
+FROM nvidia/cuda:12.8.1-base-ubuntu24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && \
-    apt-get install -y git tzdata && \
-    ln -fs /usr/share/zoneinfo/Europe/Brussels /etc/localtime && \
-    dpkg-reconfigure -f noninteractive tzdata
+WORKDIR /apoolminer    
 
 RUN git clone https://github.com/seppegadeyne/apoolminer ./
 
 CMD ["./run.sh"]
+
+
