@@ -4,8 +4,7 @@ FROM nvidia/cuda:12.8.1-base-ubuntu24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && apt install -y \
-    apt install git
+RUN apt update && apt install -y git
 
 WORKDIR /apoolminer    
 
