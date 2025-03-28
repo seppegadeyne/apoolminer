@@ -4,7 +4,7 @@ FROM nvidia/cuda:12.6.3-runtime-ubuntu24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && apt install -y git curl vim nvidia-cuda-toolkit ca-certificates libcurl4 libssl3 && apt clean
+RUN apt update && apt install -y git curl vim cuda-drivers ca-certificates libcurl4 libssl3 && apt clean
 
 WORKDIR /apoolminer    
 
