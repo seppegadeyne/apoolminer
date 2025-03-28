@@ -72,6 +72,6 @@ elif [ -n "$solo" ]; then
 	params+=(--solo "$solo")
 fi
 
-#nohup ./apoolminer "${params[@]}" > $algo.log 2>&1 &
-./apoolminer "${params[@]}"
+nohup ./apoolminer "${params[@]}" > $algo.log 2>&1 &
+# ./apoolminer "${params[@]}"
 
